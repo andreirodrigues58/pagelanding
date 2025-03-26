@@ -1,0 +1,110 @@
+/* Global Responsivo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Ajuste para não deixar o card muito largo */
+.container {
+    width: 100%;
+    max-width: 400px; /* Reduzindo o tamanho do card */
+    padding: 20px;
+}
+
+/* Ajustes específicos para index.html */
+#home {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding: 50px 20px;
+    justify-content: space-between;
+}
+
+#banner img {
+    max-width: 70%;
+    height: auto;
+}
+
+#cta {
+    width: 45%;
+    max-width: 600px;
+}
+
+/* 📌 Responsividade Geral */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+    }
+
+    #home {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    #banner img {
+        max-width: 95%;
+    }
+
+    #cta {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* 📌 Ajuste para Tablets */
+@media (max-width: 768px) {
+    .container {
+        max-width: 95%;
+    }
+
+    h2, h3 {
+        font-size: 1.8rem;
+    }
+
+    input, select, button {
+        font-size: 1rem;
+    }
+
+    #banner img {
+        max-width: 100%;
+    }
+}
+
+/* 📌 Ajuste para Celulares */
+@media (max-width: 480px) {
+    .container {
+        width: 90%; /* Reduzindo a largura do card */
+        max-width: 320px;
+        padding: 15px;
+    }
+
+    h2, h3 {
+        font-size: 1.5rem;
+    }
+
+    input, select, button {
+        font-size: 0.9rem;
+    }
+
+    #banner img {
+        max-width: 100%;
+    }
+}
+
+/* Para rolagem suave */
+html {
+    scroll-behavior: smooth;
+}
